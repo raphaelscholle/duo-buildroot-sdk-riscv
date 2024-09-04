@@ -3,6 +3,9 @@ name: Bulid Milk-V Duo Image
 on:
   push:
 
+env:
+  TZ: Asia/Shanghai
+
 jobs:
   build:
     runs-on: ubuntu-latest
