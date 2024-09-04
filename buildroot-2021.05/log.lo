@@ -1,0 +1,1071 @@
+/usr/bin/make -j1 O=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output HOSTCC="/usr/bin/gcc" HOSTCXX="/usr/bin/g++" syncconfig
+make[1]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05'
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config/lxdialog
+PKG_CONFIG_PATH="" /usr/bin/make CC="/usr/bin/gcc" HOSTCC="/usr/bin/gcc" \
+    obj=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config -C support/kconfig -f Makefile.br conf
+make[2]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/support/kconfig'
+/usr/bin/gcc -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE  -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config -DCONFIG_=\"\"  -MM *.c > /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config/.depend 2>/dev/null || :
+/usr/bin/gcc -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE  -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config -DCONFIG_=\"\"   -c conf.c -o /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config/conf.o
+/usr/bin/gcc -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE  -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config -DCONFIG_=\"\"  -I. -c /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config/zconf.tab.c -o /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config/zconf.tab.o
+/usr/bin/gcc -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE  -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config -DCONFIG_=\"\"   /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config/conf.o /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config/zconf.tab.o  -o /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config/conf
+rm /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/buildroot-config/zconf.tab.c
+make[2]: Leaving directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/support/kconfig'
+make[1]: Leaving directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05'
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target
+[7m>>> host-skeleton  Extracting[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target
+[7m>>> host-skeleton  Patching[27m
+[7m>>> host-skeleton  Configuring[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target
+[7m>>> host-skeleton  Building[27m
+[7m>>> host-skeleton  Installing to host directory[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/target
+pkgconf-1.6.3.tar.xz: OK (sha256: 61f0b31b0d5ea0e862b454a80c170f57bad47879c0c42bd8de89200ff62ea210)
+[7m>>> host-pkgconf 1.6.3 Extracting[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/target
+xzcat /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/dl/pkgconf/pkgconf-1.6.3.tar.xz | tar --strip-components=1 -C /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3   -xf -
+[7m>>> host-pkgconf 1.6.3 Patching[27m
+
+Applying 0001-Only-prefix-with-the-sysroot-a-subset-of-variables.patch using patch: 
+patching file libpkgconf/tuple.c
+
+Applying 0002-Revert-main-assume-modversion-insted-of-version-if-o.patch using patch: 
+patching file cli/main.c
+[7m>>> host-pkgconf 1.6.3 Updating config.sub and config.guess[27m
+for file in config.guess config.sub; do for i in $(find /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3 -name $file); do cp support/gnuconfig/$file $i; done; done
+[7m>>> host-pkgconf 1.6.3 Patching libtool[27m
+patching file /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3/ltmain.sh
+Hunk #1 succeeded at 2694 (offset 7 lines).
+Hunk #2 succeeded at 4284 (offset 7 lines).
+Hunk #3 succeeded at 6579 (offset 25 lines).
+Hunk #4 succeeded at 6589 (offset 25 lines).
+Hunk #5 succeeded at 6882 (offset 25 lines).
+Hunk #6 succeeded at 7174 (offset 25 lines).
+Hunk #7 succeeded at 8146 (offset 34 lines).
+Hunk #8 succeeded at 10778 (offset 68 lines).
+[7m>>> host-pkgconf 1.6.3 Configuring[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/target
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/target
+(cd /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3/ && rm -rf config.cache; PATH="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" PKG_CONFIG="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib/pkgconfig:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/pkgconfig" AR="/usr/bin/ar" AS="/usr/bin/as" LD="/usr/bin/ld" NM="/usr/bin/nm" CC="/usr/bin/gcc" GCC="/usr/bin/gcc" CXX="/usr/bin/g++" CPP="/usr/bin/cpp" OBJCOPY="/usr/bin/objcopy" RANLIB="/usr/bin/ranlib" CPPFLAGS="-I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/include" CFLAGS="-O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/include" CXXFLAGS="-O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/include" LDFLAGS="-L/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib -Wl,-rpath,/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib" INTLTOOL_PERL=/usr/bin/perl CFLAGS="-O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/include" LDFLAGS="-L/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib -Wl,-rpath,/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib"  CONFIG_SITE=/dev/null ./configure --prefix="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host" --sysconfdir="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/etc" --localstatedir="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/var" --enable-shared --disable-static --disable-gtk-doc --disable-gtk-doc-html --disable-doc --disable-docs --disable-documentation --disable-debug --with-xmlto=no --with-fop=no --disable-nls --disable-dependency-tracking   )
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking whether /usr/bin/gcc understands -c and -o together... yes
+checking whether C compiler accepts -Wall... yes
+checking whether C compiler accepts -Wextra... yes
+checking whether C compiler accepts -Wformat=2... yes
+checking whether C compiler accepts -std=gnu99... yes
+checking for strlcpy... no
+checking for strlcat... no
+checking for strndup... yes
+checking for cygwin_conv_path... no
+checking how to run the C preprocessor... /usr/bin/cpp
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for sys/stat.h... (cached) yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking whether make supports nested variables... yes
+checking dependency style of /usr/bin/gcc... none
+checking whether make supports nested variables... (cached) yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm
+checking the name lister (/usr/bin/nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... /usr/bin/ranlib
+checking command to parse /usr/bin/nm output from /usr/bin/gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/bin/gcc supports -fno-rtti -fno-exceptions... no
+checking for /usr/bin/gcc option to produce PIC... -fPIC -DPIC
+checking if /usr/bin/gcc PIC flag -fPIC -DPIC works... yes
+checking if /usr/bin/gcc static flag -static works... yes
+checking if /usr/bin/gcc supports -c -o file.o... yes
+checking if /usr/bin/gcc supports -c -o file.o... (cached) yes
+checking whether the /usr/bin/gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking how to run the C preprocessor... /usr/bin/cpp
+checking for gcc... (cached) /usr/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/bin/gcc accepts -g... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C89... (cached) none needed
+checking whether /usr/bin/gcc understands -c and -o together... (cached) yes
+checking whether ln -s works... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating Kyuafile
+config.status: creating libpkgconf.pc
+config.status: creating tests/Kyuafile
+config.status: creating tests/test_env.sh
+config.status: creating libpkgconf/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+[7m>>> host-pkgconf 1.6.3 Building[27m
+PATH="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" PKG_CONFIG="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib/pkgconfig:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/pkgconfig"  /usr/bin/make -j9  -C /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3/
+make[1]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3'
+  CC       libpkgconf/audit.lo
+  CC       libpkgconf/cache.lo
+  CC       libpkgconf/client.lo
+  CC       libpkgconf/pkg.lo
+  CC       libpkgconf/bsdstubs.lo
+  CC       libpkgconf/argvsplit.lo
+  CC       libpkgconf/fragment.lo
+  CC       libpkgconf/fileio.lo
+  CC       libpkgconf/tuple.lo
+  CC       libpkgconf/dependency.lo
+  CC       libpkgconf/queue.lo
+  CC       libpkgconf/path.lo
+  CC       libpkgconf/personality.lo
+  CC       libpkgconf/parser.lo
+  CC       cli/pkgconf-getopt_long.o
+  CC       cli/pkgconf-main.o
+  CC       cli/pkgconf-renderer-msvc.o
+  CCLD     libpkgconf.la
+  CCLD     pkgconf
+make[1]: Leaving directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3'
+[7m>>> host-pkgconf 1.6.3 Installing to host directory[27m
+PATH="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" PKG_CONFIG="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib/pkgconfig:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/pkgconfig"  /usr/bin/make -j9 install -C /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3/
+make[1]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3'
+make[2]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3'
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib'
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/doc/pkgconf'
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/aclocal'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libpkgconf.la '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib'
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/man/man1'
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/man/man5'
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/include/pkgconf'
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib/pkgconfig'
+ /usr/bin/install -c -m 644 pkg.m4 '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/aclocal'
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/man/man7'
+ /usr/bin/install -c -m 644 README.md AUTHORS '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/doc/pkgconf'
+ /usr/bin/install -c -m 644 libpkgconf.pc '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib/pkgconfig'
+ /usr/bin/install -c -m 644 man/pc.5 man/pkgconf-personality.5 '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/man/man5'
+ /usr/bin/install -c -m 644 man/pkgconf.1 '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/man/man1'
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/include/pkgconf/libpkgconf'
+ /usr/bin/install -c -m 644 man/pkg.m4.7 '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/share/man/man7'
+ /usr/bin/install -c -m 644  libpkgconf/bsdstubs.h libpkgconf/iter.h libpkgconf/libpkgconf.h libpkgconf/stdinc.h libpkgconf/libpkgconf-api.h '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/include/pkgconf/libpkgconf'
+libtool: install: /usr/bin/install -c .libs/libpkgconf.so.3.0.0 /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib/libpkgconf.so.3.0.0
+libtool: install: (cd /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib && { ln -s -f libpkgconf.so.3.0.0 libpkgconf.so.3 || { rm -f libpkgconf.so.3 && ln -s libpkgconf.so.3.0.0 libpkgconf.so.3; }; })
+libtool: install: (cd /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib && { ln -s -f libpkgconf.so.3.0.0 libpkgconf.so || { rm -f libpkgconf.so && ln -s libpkgconf.so.3.0.0 libpkgconf.so; }; })
+libtool: install: /usr/bin/install -c .libs/libpkgconf.lai /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib/libpkgconf.la
+libtool: finish: PATH="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/sbin" ldconfig -n /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c pkgconf '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin'
+libtool: install: /usr/bin/install -c pkgconf /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin/pkgconf
+make[2]: Leaving directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3'
+make[1]: Leaving directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-pkgconf-1.6.3'
+/usr/bin/install -m 0755 -D package/pkgconf/pkg-config.in /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin/pkg-config
+/usr/bin/sed -i -e 's,@STAGING_SUBDIR@,riscv64-buildroot-linux-musl/sysroot,g' /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin/pkg-config
+/usr/bin/sed -i -e 's,@STATIC@,,' /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/bin/pkg-config
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/target
+zlib-1.2.11.tar.xz: OK (sha256: 4ff941449631ace0d4d203e3483be9dbc9da454084111f97ea0a2114e19bf066)
+[7m>>> host-libzlib 1.2.11 Extracting[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/target
+xzcat /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/dl/libzlib/zlib-1.2.11.tar.xz | tar --strip-components=1 -C /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-libzlib-1.2.11   -xf -
+[7m>>> host-libzlib 1.2.11 Patching[27m
+[7m>>> host-libzlib 1.2.11 Configuring[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/target
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/target
+(cd /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-libzlib-1.2.11; rm -rf config.cache;  PATH="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/bin:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" PKG_CONFIG="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib/pkgconfig:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/share/pkgconfig" AR="/usr/bin/ar" AS="/usr/bin/as" LD="/usr/bin/ld" NM="/usr/bin/nm" CC="/usr/bin/gcc" GCC="/usr/bin/gcc" CXX="/usr/bin/g++" CPP="/usr/bin/cpp" OBJCOPY="/usr/bin/objcopy" RANLIB="/usr/bin/ranlib" CPPFLAGS="-I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include" CFLAGS="-O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include" CXXFLAGS="-O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include" LDFLAGS="-L/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib -Wl,-rpath,/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib" INTLTOOL_PERL=/usr/bin/perl ./configure --prefix="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host" --sysconfdir="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/etc" )
+ignored option: --sysconfdir
+Checking for shared library support...
+Building shared library libz.so.1.2.11 with /usr/bin/gcc.
+Checking for size_t... Yes.
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+Checking for strerror... Yes.
+Checking for unistd.h... Yes.
+Checking for stdarg.h... Yes.
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+Checking for vsnprintf() in stdio.h... Yes.
+Checking for return value of vsnprintf()... Yes.
+Checking for attribute(visibility) support... Yes.
+[7m>>> host-libzlib 1.2.11 Building[27m
+PATH="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/bin:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" PKG_CONFIG="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib/pkgconfig:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/share/pkgconfig" /usr/bin/make -j1 -C /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-libzlib-1.2.11
+make[1]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-libzlib-1.2.11'
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -c -o example.o test/example.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o adler32.o adler32.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o crc32.o crc32.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o deflate.o deflate.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o infback.o infback.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o inffast.o inffast.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o inflate.o inflate.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o inftrees.o inftrees.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o trees.o trees.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o zutil.o zutil.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o compress.o compress.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o uncompr.o uncompr.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o gzclose.o gzclose.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o gzlib.o gzlib.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o gzread.o gzread.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -c -o gzwrite.o gzwrite.c
+/usr/bin/ar rc libz.a adler32.o crc32.o deflate.o infback.o inffast.o inflate.o inftrees.o trees.o zutil.o compress.o uncompr.o gzclose.o gzlib.o gzread.o gzwrite.o 
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o example example.o -L. libz.a
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -c -o minigzip.o test/minigzip.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o minigzip minigzip.o -L. libz.a
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/adler32.o adler32.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/crc32.o crc32.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/deflate.o deflate.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/infback.o infback.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/inffast.o inffast.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/inflate.o inflate.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/inftrees.o inftrees.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/trees.o trees.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/zutil.o zutil.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/compress.o compress.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/uncompr.o uncompr.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/gzclose.o gzclose.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/gzlib.o gzlib.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/gzread.o gzread.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN  -DPIC -c -o objs/gzwrite.o gzwrite.c
+/usr/bin/gcc -shared -Wl,-soname,libz.so.1,--version-script,zlib.map -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o libz.so.1.2.11 adler32.lo crc32.lo deflate.lo infback.lo inffast.lo inflate.lo inftrees.lo trees.lo zutil.lo compress.lo uncompr.lo gzclose.lo gzlib.lo gzread.lo gzwrite.lo  -lc -L/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib -Wl,-rpath,/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib
+rm -f libz.so libz.so.1
+ln -s libz.so.1.2.11 libz.so
+ln -s libz.so.1.2.11 libz.so.1
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o examplesh example.o -L. libz.so.1.2.11
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o minigzipsh minigzip.o -L. libz.so.1.2.11
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -D_FILE_OFFSET_BITS=64 -c -o example64.o test/example.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o example64 example64.o -L. libz.a
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -D_FILE_OFFSET_BITS=64 -c -o minigzip64.o test/minigzip.c
+/usr/bin/gcc -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o minigzip64 minigzip64.o -L. libz.a
+make[1]: Leaving directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-libzlib-1.2.11'
+[7m>>> host-libzlib 1.2.11 Installing to host directory[27m
+PATH="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/bin:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" PKG_CONFIG="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib/pkgconfig:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/share/pkgconfig" /usr/bin/make -j1 -C /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-libzlib-1.2.11 LDCONFIG=true install
+make[1]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-libzlib-1.2.11'
+rm -f /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib/libz.a
+cp libz.a /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib
+chmod 644 /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib/libz.a
+cp libz.so.1.2.11 /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib
+chmod 755 /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib/libz.so.1.2.11
+rm -f /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/share/man/man3/zlib.3
+cp zlib.3 /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/share/man/man3
+chmod 644 /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/share/man/man3/zlib.3
+rm -f /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib/pkgconfig/zlib.pc
+cp zlib.pc /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib/pkgconfig
+chmod 644 /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/lib/pkgconfig/zlib.pc
+rm -f /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include/zlib.h /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include/zconf.h
+cp zlib.h zconf.h /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include
+chmod 644 /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include/zlib.h /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/include/zconf.h
+make[1]: Leaving directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-libzlib-1.2.11'
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/target
+[7m>>> host-zlib  Extracting[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/target
+[7m>>> host-zlib  Patching[27m
+[7m>>> host-zlib  Configuring[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/host
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/host
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/target
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-libzlib/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/target
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/target
+[7m>>> host-zlib  Building[27m
+[7m>>> host-zlib  Installing to host directory[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/target
+util-linux-2.36.2.tar.xz: OK (sha256: f7516ba9d8689343594356f0e5e1a5f0da34adfbc89023437735872bb5024c5f)
+[7m>>> host-util-linux 2.36.2 Extracting[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/target
+xzcat /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/dl/util-linux/util-linux-2.36.2.tar.xz | tar --strip-components=1 -C /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2   -xf -
+[7m>>> host-util-linux 2.36.2 Patching[27m
+[7m>>> host-util-linux 2.36.2 Updating config.sub and config.guess[27m
+for file in config.guess config.sub; do for i in $(find /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2 -name $file); do cp support/gnuconfig/$file $i; done; done
+[7m>>> host-util-linux 2.36.2 Patching libtool[27m
+patching file /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2/config/ltmain.sh
+Hunk #1 succeeded at 2694 (offset 7 lines).
+Hunk #2 succeeded at 4284 (offset 7 lines).
+Hunk #3 succeeded at 6579 (offset 25 lines).
+Hunk #4 succeeded at 6589 (offset 25 lines).
+Hunk #5 succeeded at 6882 (offset 25 lines).
+Hunk #6 succeeded at 7174 (offset 25 lines).
+Hunk #7 succeeded at 8142 (offset 30 lines).
+Hunk #8 succeeded at 10771 (offset 61 lines).
+[7m>>> host-util-linux 2.36.2 Configuring[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/target
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-pkgconf/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/target
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/target
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-zlib/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/target
+(cd /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2/ && rm -rf config.cache; PATH="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/bin:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" PKG_CONFIG="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/lib/pkgconfig:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/share/pkgconfig" AR="/usr/bin/ar" AS="/usr/bin/as" LD="/usr/bin/ld" NM="/usr/bin/nm" CC="/usr/bin/gcc" GCC="/usr/bin/gcc" CXX="/usr/bin/g++" CPP="/usr/bin/cpp" OBJCOPY="/usr/bin/objcopy" RANLIB="/usr/bin/ranlib" CPPFLAGS="-I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/include" CFLAGS="-O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/include" CXXFLAGS="-O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/include" LDFLAGS="-L/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/lib -Wl,-rpath,/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/lib" INTLTOOL_PERL=/usr/bin/perl CFLAGS="-O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/include" LDFLAGS="-L/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/lib -Wl,-rpath,/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/lib"  CONFIG_SITE=/dev/null ./configure --prefix="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host" --sysconfdir="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/etc" --localstatedir="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/var" --enable-shared --disable-static --disable-gtk-doc --disable-gtk-doc-html --disable-doc --disable-docs --disable-documentation --disable-debug --with-xmlto=no --with-fop=no --disable-nls --disable-dependency-tracking  --without-systemd --with-systemdsystemunitdir=no --without-python --enable-libblkid --enable-libmount --enable-libuuid --without-libmagic --without-ncurses --without-ncursesw --without-tinfo --disable-makeinstall-chown --disable-agetty --disable-chfn-chsh --disable-chmem --disable-login --disable-lslogins --disable-mesg --disable-more --disable-newgrp --disable-nologin --disable-nsenter --disable-pg --disable-rfkill --disable-runuser --disable-schedutils --disable-setpriv --disable-setterm --disable-su --disable-sulogin --disable-tunelp --disable-ul --disable-unshare --disable-uuidd --disable-vipw --disable-wall --disable-wdctl --disable-write --disable-zramctl )
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking whether /usr/bin/gcc understands -c and -o together... yes
+checking how to run the C preprocessor... /usr/bin/cpp
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking dependency style of /usr/bin/gcc... none
+checking whether make supports nested variables... (cached) yes
+checking the archiver (/usr/bin/ar) interface... ar
+checking for /usr/bin/gcc option to accept ISO C99... none needed
+checking for /usr/bin/gcc option to accept ISO Standard C... (cached) none needed
+checking for bison... bison -y
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for an ANSI C-conforming const... yes
+checking for working volatile... yes
+checking whether byte ordering is bigendian... no
+checking whether compiler handles -fno-common... yes
+checking whether compiler handles -Wall... yes
+checking whether compiler handles -Wextra... yes
+checking whether compiler handles -Wextra-semi... no
+checking whether compiler handles -Wembedded-directive... no
+checking whether compiler handles -Wmissing-declarations... yes
+checking whether compiler handles -Wmissing-parameter-type... yes
+checking whether compiler handles -Wmissing-prototypes... yes
+checking whether compiler handles -Wno-missing-field-initializers... yes
+checking whether compiler handles -Wredundant-decls... yes
+checking whether compiler handles -Wsign-compare... yes
+checking whether compiler handles -Wtype-limits... yes
+checking whether compiler handles -Wuninitialized... yes
+checking whether compiler handles -Wunused-but-set-parameter... yes
+checking whether compiler handles -Wunused-but-set-variable... yes
+checking whether compiler handles -Wunused-parameter... yes
+checking whether compiler handles -Wunused-result... yes
+checking whether compiler handles -Wunused-variable... yes
+checking whether compiler handles -Wnested-externs... yes
+checking whether compiler handles -Wpointer-arith... yes
+checking whether compiler handles -Wstrict-prototypes... yes
+checking whether compiler handles -Wformat-security... yes
+checking whether compiler handles -Wimplicit-function-declaration... yes
+checking whether compiler handles -Wdiscarded-qualifiers... yes
+checking whether compiler handles -Waddress-of-packed-member... yes
+checking whether compiler handles -Werror=sequence-point... yes
+checking whether compiler handles -Wno-clobbered... yes
+checking whether compiler handles -Wno-cast-function-type... yes
+checking whether compiler handles -Wno-unused-parameter... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm
+checking the name lister (/usr/bin/nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... /usr/bin/ranlib
+checking command to parse /usr/bin/nm output from /usr/bin/gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/bin/gcc supports -fno-rtti -fno-exceptions... no
+checking for /usr/bin/gcc option to produce PIC... -fPIC -DPIC
+checking if /usr/bin/gcc PIC flag -fPIC -DPIC works... yes
+checking if /usr/bin/gcc static flag -static works... yes
+checking if /usr/bin/gcc supports -c -o file.o... yes
+checking if /usr/bin/gcc supports -c -o file.o... (cached) yes
+checking whether the /usr/bin/gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking linker version script flag... --version-script
+checking if version scripts can use complex wildcards... yes
+checking pkg-config is at least version 0.9.0... yes
+checking whether to build gtk-doc documentation... no
+checking for gtkdoc-check... no
+checking for xsltproc... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether to enable assertions... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking whether NLS is requested... no
+checking for msgfmt... no
+checking for gmsgfmt... :
+checking for xgettext... no
+checking for msgmerge... no
+checking for ld used by /usr/bin/gcc... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking whether to use NLS... no
+checking for linux/compiler.h... no
+checking for linux/blkpg.h... yes
+checking for linux/major.h... yes
+checking asm/io.h usability... no
+checking asm/io.h presence... no
+checking for asm/io.h... no
+checking err.h usability... yes
+checking err.h presence... yes
+checking for err.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for inttypes.h... (cached) yes
+checking lastlog.h usability... yes
+checking lastlog.h presence... yes
+checking for lastlog.h... yes
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking linux/btrfs.h usability... yes
+checking linux/btrfs.h presence... yes
+checking for linux/btrfs.h... yes
+checking linux/cdrom.h usability... yes
+checking linux/cdrom.h presence... yes
+checking for linux/cdrom.h... yes
+checking linux/falloc.h usability... yes
+checking linux/falloc.h presence... yes
+checking for linux/falloc.h... yes
+checking linux/watchdog.h usability... yes
+checking linux/watchdog.h presence... yes
+checking for linux/watchdog.h... yes
+checking linux/fd.h usability... yes
+checking linux/fd.h presence... yes
+checking for linux/fd.h... yes
+checking linux/raw.h usability... no
+checking linux/raw.h presence... no
+checking for linux/raw.h... no
+checking linux/tiocl.h usability... yes
+checking linux/tiocl.h presence... yes
+checking for linux/tiocl.h... yes
+checking linux/version.h usability... yes
+checking linux/version.h presence... yes
+checking for linux/version.h... yes
+checking linux/securebits.h usability... yes
+checking linux/securebits.h presence... yes
+checking for linux/securebits.h... yes
+checking linux/net_namespace.h usability... yes
+checking linux/net_namespace.h presence... yes
+checking for linux/net_namespace.h... yes
+checking linux/capability.h usability... yes
+checking linux/capability.h presence... yes
+checking for linux/capability.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking mntent.h usability... yes
+checking mntent.h presence... yes
+checking for mntent.h... yes
+checking net/if.h usability... yes
+checking net/if.h presence... yes
+checking for net/if.h... yes
+checking net/if_dl.h usability... no
+checking net/if_dl.h presence... no
+checking for net/if_dl.h... no
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking security/pam_appl.h usability... no
+checking security/pam_appl.h presence... no
+checking for security/pam_appl.h... no
+checking for stdint.h... (cached) yes
+checking stdio_ext.h usability... yes
+checking stdio_ext.h presence... yes
+checking for stdio_ext.h... yes
+checking for stdlib.h... (cached) yes
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking byteswap.h usability... yes
+checking byteswap.h presence... yes
+checking for byteswap.h... yes
+checking sys/endian.h usability... no
+checking sys/endian.h presence... no
+checking for sys/endian.h... no
+checking sys/disk.h usability... no
+checking sys/disk.h presence... no
+checking for sys/disk.h... no
+checking sys/disklabel.h usability... no
+checking sys/disklabel.h presence... no
+checking for sys/disklabel.h... no
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking sys/io.h usability... yes
+checking sys/io.h presence... yes
+checking for sys/io.h... yes
+checking sys/ioccom.h usability... no
+checking sys/ioccom.h presence... no
+checking for sys/ioccom.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/mount.h usability... yes
+checking sys/mount.h presence... yes
+checking for sys/mount.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/prctl.h usability... yes
+checking sys/prctl.h presence... yes
+checking for sys/prctl.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/signalfd.h usability... yes
+checking sys/signalfd.h presence... yes
+checking for sys/signalfd.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking for sys/stat.h... (cached) yes
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking sys/swap.h usability... yes
+checking sys/swap.h presence... yes
+checking for sys/swap.h... yes
+checking sys/syscall.h usability... yes
+checking sys/syscall.h presence... yes
+checking for sys/syscall.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/timex.h usability... yes
+checking sys/timex.h presence... yes
+checking for sys/timex.h... yes
+checking sys/ttydefaults.h usability... yes
+checking sys/ttydefaults.h presence... yes
+checking for sys/ttydefaults.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/ucred.h usability... no
+checking sys/ucred.h presence... no
+checking for sys/ucred.h... no
+checking sys/un.h usability... yes
+checking sys/un.h presence... yes
+checking for sys/un.h... yes
+checking for unistd.h... (cached) yes
+checking shadow.h usability... yes
+checking shadow.h presence... yes
+checking for shadow.h... yes
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking utmpx.h usability... yes
+checking utmpx.h presence... yes
+checking for utmpx.h... yes
+checking for linux/fs.h... no
+checking for linux/gsmmux.h... yes
+checking for security/pam_misc.h... no
+checking linux/blkzoned.h usability... yes
+checking linux/blkzoned.h presence... yes
+checking for linux/blkzoned.h... yes
+checking for security/openpam.h... no
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking whether langinfo.h defines ALTMON_x constants... yes
+checking whether langinfo.h defines _NL_ABALTMON_x constants... yes
+checking for struct termios.c_line... yes
+checking for struct stat.st_mtim.tv_nsec... yes
+checking whether _NL_TIME_WEEK_1STDAY is declared... yes
+checking whether environ is declared... yes
+checking whether strsignal is declared... yes
+checking whether TIOCGLCKTRMIOS is declared... yes
+checking whether SOCK_CLOEXEC is declared... yes
+checking whether SOCK_NONBLOCK is declared... yes
+checking whether SO_PASSCRED is declared... yes
+checking for clearenv... yes
+checking for __fpurge... yes
+checking for fpurge... no
+checking for __fpending... yes
+checking for secure_getenv... yes
+checking for __secure_getenv... no
+checking for eaccess... yes
+checking for err... yes
+checking for errx... yes
+checking for explicit_bzero... yes
+checking for fmemopen... yes
+checking for fsync... yes
+checking for utimensat... yes
+checking for getdomainname... yes
+checking for getdtablesize... yes
+checking for getexecname... no
+checking for getmntinfo... no
+checking for getrandom... yes
+checking for getrlimit... yes
+checking for getsgnam... yes
+checking for inotify_init... yes
+checking for jrand48... yes
+checking for lchown... yes
+checking for llseek... no
+checking for mempcpy... yes
+checking for mkostemp... yes
+checking for nanosleep... yes
+checking for ntp_gettime... yes
+checking for personality... yes
+checking for pidfd_open... no
+checking for pidfd_send_signal... no
+checking for posix_fadvise... yes
+checking for prctl... yes
+checking for qsort_r... yes
+checking for rpmatch... yes
+checking for scandirat... yes
+checking for setprogname... no
+checking for setresgid... yes
+checking for setresuid... yes
+checking for sched_setattr... no
+checking for sched_setscheduler... yes
+checking for sigqueue... yes
+checking for srandom... yes
+checking for strnchr... no
+checking for strndup... yes
+checking for strnlen... yes
+checking for sysconf... yes
+checking for sysinfo... yes
+checking for timegm... yes
+checking for usleep... yes
+checking for vwarnx... yes
+checking for warn... yes
+checking for warnx... yes
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for openat... yes
+checking for fstatat... yes
+checking for unlinkat... yes
+checking for ioperm... yes
+checking for iopl... yes
+checking for futimens... yes
+checking for inotify_init1... yes
+checking for open_memstream... yes
+checking for reboot... yes
+checking for updwtmpx... yes
+checking for updwtmpx... (cached) yes
+checking for getusershell... yes
+checking for syscall setns... SYS_setns
+checking for syscall pidfd_open... SYS_pidfd_open
+checking for syscall pidfd_send_signal... SYS_pidfd_send_signal
+checking for isnan... yes
+checking for clock_gettime... yes
+checking for timer_create... yes
+checking for rtas_get_sysparm in -lrtas... no
+checking for struct sockaddr.sa_len... no
+checking for library containing socket... none required
+checking for dirfd... yes
+checking whether program_invocation_short_name is defined... yes
+checking whether __progname is defined... yes
+checking whether the target supports thread-local storage... yes
+checking for openpty in -lutil... yes
+checking for union semun... no
+checking for loff_t... yes
+checking wchar_t support... yes
+checking for cpu_set_t... yes
+checking for sighandler_t... yes
+checking whether CPU_ALLOC is declared... yes
+checking crypt.h usability... yes
+checking crypt.h presence... yes
+checking for crypt.h... yes
+checking for udev_new in -ludev... yes
+checking for readline in -lreadline... no
+checking for syscall fallocate... SYS_fallocate
+checking for valid fallocate() function... yes
+checking for valid posix_fallocate() function... yes
+checking for unshare... yes
+checking for setns... yes
+checking for capng_apply in -lcap-ng... no
+checking for PCRE... no
+checking for crc32 in -lz... yes
+checking for syscall swapon... SYS_swapon
+checking for syscall swapoff... SYS_swapoff
+checking for swapon... yes
+checking for swapoff... yes
+checking for syscall prlimit64... SYS_prlimit64
+checking for prlimit... yes
+checking for syscall pivot_root... SYS_pivot_root
+checking for LIBUSER... no
+checking for ECONF... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libblkid/docs/Makefile
+config.status: creating libblkid/docs/version.xml
+config.status: creating libblkid/src/blkid.h
+config.status: creating libfdisk/docs/Makefile
+config.status: creating libfdisk/docs/version.xml
+config.status: creating libfdisk/src/libfdisk.h
+config.status: creating libmount/docs/Makefile
+config.status: creating libmount/docs/version.xml
+config.status: creating libmount/src/libmount.h
+config.status: creating libsmartcols/docs/Makefile
+config.status: creating libsmartcols/docs/version.xml
+config.status: creating libsmartcols/src/libsmartcols.h
+config.status: creating po/Makefile.in
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+
+	util-linux  2.36.2
+
+	prefix:            /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host
+	exec prefix:       ${prefix}
+
+	runstatedir:       ${localstatedir}/run
+	bindir:            ${exec_prefix}/bin
+	sbindir:           ${exec_prefix}/sbin
+	libdir:            ${exec_prefix}/lib
+	includedir:        ${prefix}/include
+	usrbin_execdir:    ${exec_prefix}/bin
+	usrsbin_execdir:   ${exec_prefix}/sbin
+	usrlib_execdir:    ${exec_prefix}/lib
+        vendordir:         
+
+	compiler:          /usr/bin/gcc
+	cflags:            -O2 -I/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/include
+	suid cflags:       
+	ldflags:           -L/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/lib -Wl,-rpath,/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/lib
+	suid ldflags:      
+	ASAN enabled:      no
+
+	Python:            
+	Python version:    
+	Python libs:       
+
+	Bash completions:  ${datarootdir}/bash-completion/completions
+	Systemd support:   no
+	Systemd unitdir:   no
+	libeconf support:  no
+	Btrfs support:     yes
+	Wide-char support: yes
+
+	warnings:
+
+ -fno-common -Wall -Wextra -Wmissing-declarations -Wmissing-parameter-type -Wmissing-prototypes -Wno-missing-field-initializers -Wredundant-decls -Wsign-compare -Wtype-limits -Wuninitialized -Wunused-but-set-parameter -Wunused-but-set-variable -Wunused-parameter -Wunused-result -Wunused-variable -Wnested-externs -Wpointer-arith -Wstrict-prototypes -Wformat-security -Wimplicit-function-declaration -Wdiscarded-qualifiers -Waddress-of-packed-member -Werror=sequence-point
+
+	Type 'make' or 'make <utilname>' to compile.
+
+[7m>>> host-util-linux 2.36.2 Building[27m
+PATH="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/bin:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" PKG_CONFIG="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/lib/pkgconfig:/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-util-linux/host/share/pkgconfig"  /usr/bin/make -j9  -C /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2/
+make[1]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2'
+/usr/bin/make  all-recursive
+make[2]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2'
+Making all in po
+make[3]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2/po'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2/po'
+make[3]: Entering directory '/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/build/host-util-linux-2.36.2'
+  CC       sys-utils/umount-umount.o
+  CC       sys-utils/mountpoint-mountpoint.o
+  CC       sys-utils/fstrim-fstrim.o
+  CC       sys-utils/ctrlaltdel.o
+  CC       sys-utils/fsfreeze.o
+  CC       sys-utils/blkdiscard-blkdiscard.o
+  CC       lib/blkdiscard-monotonic.o
+  CC       sys-utils/blkzone.o
+  CC       sys-utils/losetup-losetup.o
+  CC       sys-utils/swapon-swapon.o
+  CC       sys-utils/swapon-swapon-common.o
+  CC       lib/swapon-swapprober.o
+  CC       sys-utils/swapoff-swapoff.o
+  CC       sys-utils/swapoff-swapon-common.o
+  CC       lib/swapoff-swapprober.o
+  CC       sys-utils/chcpu.o
+  CC       sys-utils/pivot_root.o
+  CC       sys-utils/switch_root.o
+  CC       sys-utils/hwclock-hwclock.o
+  CC       sys-utils/hwclock-hwclock-parse-date.o
+  CC       sys-utils/hwclock-hwclock-cmos.o
+  CC       sys-utils/hwclock-hwclock-rtc.o
+  CC       lib/hwclock-monotonic.o
+  CC       misc-utils/blkid-blkid.o
+  CC       lib/blkid-ismounted.o
+  CC       misc-utils/findfs-findfs.o
+  CC       misc-utils/wipefs-wipefs.o
+  CC       lib/ismounted.o
+  CC       lib/mkswap-ismounted.o
+  CC       lib/libuuid_la-randutils.lo
+  CC       lib/libuuid_la-md5.lo
+  CC       lib/libuuid_la-sha1.lo
+  CC       disk-utils/swaplabel-swaplabel.o
+  CC       lib/swaplabel-swapprober.o
+  CC       disk-utils/fsck-fsck.o
+  CC       lib/fsck-monotonic.o
+  CC       disk-utils/fsck.cramfs.o
+  CC       disk-utils/cramfs_common.o
+  CC       disk-utils/mkfs.cramfs.o
+  CC       disk-utils/blockdev.o
+  CC       disk-utils/fdisk-fdisk.o
+  CC       disk-utils/fdisk-fdisk-menu.o
+  CC       disk-utils/fdisk-fdisk-list.o
+  CC       disk-utils/sfdisk-sfdisk.o
+  CC       disk-utils/sfdisk-fdisk-list.o
+  CC       lib/script-pty-session.o
+  CC       lib/script-monotonic.o
+  CC       term-utils/scriptreplay.o
+  CC       term-utils/script-playutils.o
+  CC       term-utils/scriptlive.o
+  CC       lib/pty-session.o
+  CC       lib/monotonic.o
+  CC       sys-utils/lsmem-lsmem.o
+  CC       sys-utils/flock.o
+  CC       lib/timer.o
+  CC       sys-utils/choom.o
+  CC       sys-utils/ipcmk.o
+  CC       sys-utils/ipcrm.o
+  CC       sys-utils/ipcs.o
+  CC       sys-utils/ipcutils.o
+  CC       sys-utils/lsirq-lsirq.o
+  CC       sys-utils/lsirq-irq-common.o
+  CC       sys-utils/lsipc-lsipc.o
+  CC       sys-utils/lsipc-ipcutils.o
+  CC       sys-utils/renice.o
+  CC       sys-utils/setsid.o
+  CC       sys-utils/setarch.o
+  CC       sys-utils/eject-eject.o
+  CC       lib/eject-monotonic.o
+  CC       sys-utils/prlimit-prlimit.o
+  CC       sys-utils/lsns-lsns.o
+  CC       sys-utils/lscpu-lscpu.o
+  CC       sys-utils/lscpu-lscpu-arm.o
+  CC       sys-utils/lscpu-lscpu-dmi.o
+  CC       sys-utils/fallocate.o
+  CC       misc-utils/cal-cal.o
+  CC       misc-utils/logger-logger.o
+  CC       lib/logger-strutils.o
+  CC       lib/logger-strv.o
+  CC       misc-utils/look.o
+  CC       misc-utils/mcookie.o
+  CC       misc-utils/namei.o
+  CC       lib/md5.o
+  CC       lib/strutils.o
+  CC       lib/idcache.o
+  CC       misc-utils/whereis.o
+  CC       misc-utils/lslocks-lslocks.o
+  CC       misc-utils/uuidgen-uuidgen.o
+  CC       misc-utils/uuidparse-uuidparse.o
+  CC       misc-utils/rename.o
+  CC       misc-utils/getopt.o
+  CC       misc-utils/fincore-fincore.o
+  CC       misc-utils/hardlink-hardlink.o
+  CC       disk-utils/isosize.o
+  CC       sys-utils/readprofile.o
+  CC       sys-utils/ldattach.o
+  CC       sys-utils/rtcwake.o
+  CC       disk-utils/fdformat.o
+  CC       disk-utils/addpart.o
+  CC       disk-utils/partx-partx.o
+  CC       disk-utils/delpart.o
+  CC       disk-utils/resizepart.o
+  GEN      sys-utils/rtcwake.8
+  GEN      sys-utils/hwclock.8
+  GEN      misc-utils/getopt.1
+  GEN      sys-utils/uname26.8
+  GEN      sys-utils/linux32.8
+  GEN      sys-utils/linux64.8
+  GEN      sys-utils/i386.8
+  GEN      sys-utils/x86_64.8
+  GEN      libuuid/uuid.pc
+  GEN      libblkid/blkid.pc
+  GEN      libmount/mount.pc
+  CC       sys-utils/dmesg-dmesg.o
+  GEN      libsmartcols/smartcols.pc
+  CC       lib/dmesg-monotonic.o
+  GEN      libfdisk/fdisk.pc
+  CC       lib/libcommon_la-blkdev.lo
+  CC       lib/libcommon_la-canonicalize.lo
+  CC       lib/libcommon_la-crc32.lo
+  CC       lib/libcommon_la-crc32c.lo
+  CC       lib/libcommon_la-env.lo
+  CC       lib/libcommon_la-idcache.lo
+  CC       lib/libcommon_la-encode.lo
+  CC       lib/libcommon_la-fileutils.lo
+  CC       lib/libcommon_la-color-names.lo
+  CC       lib/libcommon_la-mangle.lo
+  CC       lib/libcommon_la-match.lo
+  CC       lib/libcommon_la-mbsalign.lo
+  CC       lib/libcommon_la-mbsedit.lo
+  CC       lib/libcommon_la-md5.lo
+  CC       lib/libcommon_la-pager.lo
+  CC       lib/libcommon_la-procutils.lo
+  CC       lib/libcommon_la-pwdutils.lo
+  CC       lib/libcommon_la-randutils.lo
+  CC       lib/libcommon_la-setproctitle.lo
+  CC       lib/libcommon_la-strutils.lo
+  CC       lib/libcommon_la-timeutils.lo
+  CC       lib/libcommon_la-ttyutils.lo
+  CC       lib/libcommon_la-strv.lo
+  CC       lib/libcommon_la-sha1.lo
+  CC       lib/libcommon_la-signames.lo
+  CC       lib/libcommon_la-linux_version.lo
+  CC       lib/libcommon_la-loopdev.lo
+  CC       lib/libcommon_la-cpuset.lo
+  CC       lib/libcommon_la-path.lo
+  CC       lib/libcommon_la-sysfs.lo
+  CC       lib/libtcolors_la-colors.lo
+  CC       lib/libtcolors_la-color-names.lo
+  CC       sys-utils/mount-mount.o
+  CC       lib/libmount_la-monotonic.lo
+  CC       libmount/src/la-cache.lo
+  CC       libmount/src/la-fs.lo
+  CC       libmount/src/la-init.lo
+  CC       libmount/src/la-iter.lo
+  CC       libmount/src/la-lock.lo
+  CC       libmount/src/la-optmap.lo
+  CC       libmount/src/la-optstr.lo
+  CC       libmount/src/la-tab.lo
+  CC       libmount/src/la-tab_diff.lo
+  CC       libmount/src/la-tab_parse.lo
+  CC       libmount/src/la-tab_update.lo
+  CC       libmount/src/la-test.lo
+  CC       libmount/src/la-utils.lo
+  CC       libmount/src/la-version.lo
+  CC       libmount/src/la-context.lo
+  CC       libmount/src/la-context_loopdev.lo
+  CC       libmount/src/la-context_veritydev.lo
+  CC       libmount/src/la-context_mount.lo
+  CC       libmount/src/la-context_umount.lo
+  CC       libmount/src/la-monitor.lo
+  CC       libmount/src/la-btrfs.lo
+  CC       libblkid/src/la-init.lo
+  CC       libblkid/src/la-cache.lo
+  CC       libblkid/src/la-config.lo
+  CC       libblkid/src/la-dev.lo
+  CC       libblkid/src/la-devname.lo
+  CC       libblkid/src/la-devno.lo
+  CC       libblkid/src/la-encode.lo
+  CC       libblkid/src/la-evaluate.lo
+  CC       libblkid/src/la-getsize.lo
+  CC       libblkid/src/la-probe.lo
+  CC       libblkid/src/la-read.lo
+  CC       libblkid/src/la-resolve.lo
+  CC       libblkid/src/la-save.lo

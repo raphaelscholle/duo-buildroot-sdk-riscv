@@ -1,0 +1,8 @@
+[7m>>> toolchain-external-custom  Configuring[27m
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/toolchain-external-custom/host
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/toolchain-external-custom/host
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/skeleton/host/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/toolchain-external-custom/host
+mkdir -p /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/toolchain-external-custom/target
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/host-skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/toolchain-external-custom/target
+rsync -a --link-dest=/opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/skeleton/target/ /opt/duo-buildroot-sdk-riscv/buildroot-2021.05/output/per-package/toolchain-external-custom/target
+Cannot execute cross-compiler '/riscv64-unknown-linux-musl-gcc'
