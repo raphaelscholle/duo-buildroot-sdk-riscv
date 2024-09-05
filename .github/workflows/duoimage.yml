@@ -30,4 +30,12 @@ jobs:
         echo $PWD
         echo $GITHUB_WORKSPACE
         bash ./build.sh milkv-duos-sd
-
+        
+    - name: Upload Image
+      uses: actions/upload-artifact@main
+      with:
+        name: milkv-duo-${{ github.run_id }}
+        path: |
+          ${{ steps.imgpath.outputs.path }}
+          ${{ github.workspace }}/out/milk-v.hash
+        if-no-files-found: error
